@@ -1,0 +1,21 @@
+<h4>Listado de Generos</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>estado</th>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let genero of generosData">
+      <td>{{ genero.id }}</td>
+      <td>{{ genero.estado }}</td>
+      <td>{{ genero.nombre }}</td>
+      <td>
+        <button class="btn btn-info mx-2" (click)="editGenero(genero)">Editar</button>
+        <button class="btn btn-light mx-2" (click)="deleteGenero(genero)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

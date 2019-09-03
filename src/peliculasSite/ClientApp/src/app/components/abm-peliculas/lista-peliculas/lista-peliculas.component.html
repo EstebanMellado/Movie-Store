@@ -1,0 +1,60 @@
+<h4>Listado de Peliculas</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Estado</th>
+      <th>Nombre</th>
+      <th>Imagen</th>
+      <th>Resumen</th>
+      <th>Comentarios</th>
+      <th>Actores</th>
+      <th>Año</th>
+      <th>Genero</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of peliculasData">
+      <td>{{ pelicula.id }}</td>
+      <td>{{ pelicula.estado }}</td>
+      <td>{{ pelicula.nombre }}</td>
+      <td>{{ pelicula.imagen }}</td>
+      <td>{{ pelicula.resumen }}</td>
+      <td>{{ pelicula.comentarios }}</td>
+      <td>{{ pelicula.peliculaActor }}</td>
+      <td>{{ pelicula.anio }}</td>
+      <td>{{ pelicula.peliculaGenero }}</td>
+      <td>
+        <button class="btn btn-info mx-2" (click)="editClicked(pelicula)">Editar</button>
+        <a href="#" (click)="deleteClicked(pelicula)">Borrar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

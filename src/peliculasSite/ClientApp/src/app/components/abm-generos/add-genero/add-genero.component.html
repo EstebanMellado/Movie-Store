@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h4>Nuevo Genero</h4>
+    <form (ngSubmit)="agregarNuevoGenero()">
+      <input type="text" placeholder="Nombre" name="nombre" class="form-control mt-2" [(ngModel)]="newGenero.nombre">
+      <div class="input-group mb-3 mt-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Estado">
+        </div>
+      <button class="btn btn-warning mt-3" type="submit" routerLink="/generos">Agregar</button>
+    </form>
+  </div>

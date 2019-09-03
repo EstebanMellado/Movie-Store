@@ -1,0 +1,53 @@
+<div class="container mt-3">
+    <h4>Nueva Pelicula</h4>
+    <form (ngSubmit)="agregarNuevaPelicula()">
+      <input type="text" placeholder="Nombre" name="nombre" class="form-control mt-2" [(ngModel)]="newPelicula.nombre">
+      <input type="text" placeholder="Resumen" name="resumen" class="form-control mt-2" [(ngModel)]="newPelicula.resumen">
+      <input type="text" placeholder="Comentarios" name="comentarios" class="form-control mt-2" [(ngModel)]="newPelicula.comentarios">
+      <input type="text" placeholder="Año" name="anio" class="form-control mt-2" [(ngModel)]="newPelicula.anio">
+      <label class="mt-2">Genero: </label>
+      <div *ngFor="let genero of generosData" class="mt-2">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <label class="form-control" aria-label="Text input with checkbox">{{genero.nombre}}</label>
+        </div>
+      </div>
+      <div class="input-group mb-3 mt-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Estado">
+        </div>
+      <div class="input-group mb-3 mt-2">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Imagen</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" lang="es">
+            <label class="custom-file-label" for="inputGroupFile01">Elegir imagen</label>
+          </div>
+        </div>
+        <select class="custom-select" multiple *ngFor="let actor of actoresData">
+          <option selected>Elegir Actores</option>
+          <option value="{{actor.id}}}">{{actor.nombre}} {{actor.apellido}}</option>
+        </select>
+        <label class="mt-2">Actores: </label>
+      <div *ngFor="let actor of actoresData" class="mt-2">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for following text input">
+            </div>
+          </div>
+          <label class="form-control" aria-label="Text input with checkbox">{{actor.nombre}} {{actor.apellido}}</label>
+        </div>
+      </div>
+      <button class="btn btn-warning mt-3" type="submit">Agregar</button>
+    </form>
+  </div>

@@ -1,0 +1,26 @@
+<h4>Listado de Actores</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>estado</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Foto</th>
+      <th>accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let actor of actoresData">
+      <td>{{ actor.id }}</td>
+      <td>{{ actor.estado }}</td>
+      <td>{{ actor.nombre }}</td>
+      <td>{{ actor.apellido }}</td>
+      <td>{{ actor.foto }}</td>
+      <td>
+        <button class="btn btn-info mx-2" (click)="editActor(actor)">Editar</button>
+        <button class="btn btn-light mx-2" (click)="deleteActor(actor)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

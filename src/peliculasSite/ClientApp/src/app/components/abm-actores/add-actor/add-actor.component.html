@@ -1,0 +1,25 @@
+<div class="container mt-3">
+  <h4>Nuevo Actor</h4>
+  <form (ngSubmit)="agregarNuevoActor()">
+    <input type="text" placeholder="Nombre" name="nombre" class="form-control mt-2" [(ngModel)]="newActor.nombre">
+    <input type="text" placeholder="Apellido" name="apellido" class="form-control mt-2" [(ngModel)]="newActor.apellido">
+    <div class="input-group mb-3 mt-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" aria-label="Checkbox for following text input">
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="Estado">
+      </div>
+    <div class="input-group mb-3 mt-2">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">Foto</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputFotoActor" aria-describedby="inputFileFotoActor" (change)="onFileSelected($event)">
+          <label class="custom-file-label" for="inputFotoActor">Elegir foto</label>
+        </div>
+      </div>
+    <button class="btn btn-warning mt-3" type="submit">Agregar</button>
+  </form>
+</div>
