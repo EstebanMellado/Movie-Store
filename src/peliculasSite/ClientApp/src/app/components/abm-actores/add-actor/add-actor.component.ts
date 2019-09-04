@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActorService } from 'src/app/services/actor.service';
-import { HttpClient } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-add-actor',
@@ -18,7 +17,7 @@ export class AddActorComponent implements OnInit {
     foto: ''
   }
 
-  constructor(private actorService: ActorService, private http: HttpClient) { }
+  constructor(private actorService: ActorService) { }
 
   ngOnInit() {
   }

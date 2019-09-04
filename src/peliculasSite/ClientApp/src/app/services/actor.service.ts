@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ActorService {
   private headers: HttpHeaders;
-  private accessPointUrl: string = 'https://localhost:44303/api/actors';
+  private accessPointUrl: string = 'https://localhost:44303/api/actor';
 
   constructor(private http: HttpClient) {
     this.headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});

@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class GeneroService {
 
   private headers: HttpHeaders;
-  private accessPointUrl: string = 'https://localhost:44303/api/generos';
+  private accessPointUrl: string = 'https://localhost:44303/api/genero';
 
   constructor(private http: HttpClient) {
     this.headers = new HttpHeaders({'Content-Type': 'application/json; charset=utf-8'});
