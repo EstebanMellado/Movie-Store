@@ -6,3 +6,7 @@ Tecnologías:
 - Angular 7
 - Bootstrap 4
 - SQL Server
+
+# TODO:
+> 1. Refactorizar Angular services
+> 2. Crear script SQL
