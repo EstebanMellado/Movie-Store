@@ -46,6 +46,7 @@ namespace peliculasWebApi.Controllers
             return new ObjectResult(pelicula);
         }
 
+        [HttpPost]
         public IActionResult Create([FromBody]Pelicula pelicula)
         {
             if(pelicula == null)
