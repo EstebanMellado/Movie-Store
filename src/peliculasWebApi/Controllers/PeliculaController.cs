@@ -23,7 +23,7 @@ namespace peliculasWebApi.Controllers
 
             if(_context.Peliculas.Count() == 0)
             {
-                _context.Peliculas.Add(new Pelicula { Nombre = "Prueba", Estado = EstadoEnum.Normal, Comentario = "Test" });
+                _context.Peliculas.Add(new Pelicula { Nombre = "Prueba", Estado = EstadoEnum.Normal });
                 _context.SaveChanges();
             }
         }
@@ -78,7 +78,6 @@ namespace peliculasWebApi.Controllers
             peliculaOld.Estado = peliculaNew.Estado;
             peliculaOld.Imagen = peliculaNew.Imagen;
             peliculaOld.Resumen = peliculaNew.Resumen;
-            peliculaOld.Comentario = peliculaNew.Comentario;
             peliculaOld.PeliculaActor = peliculaNew.PeliculaActor;
             peliculaOld.Anio = peliculaNew.Anio;
             peliculaOld.Genero = peliculaNew.Genero;
