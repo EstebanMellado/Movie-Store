@@ -12,12 +12,15 @@ export class ListaPeliculasComponent implements OnInit {
 
 
   constructor(private peliculaService: PeliculaService) {
-    this.peliculaService.get().subscribe(data => {
-      this.peliculasData = data;
-    });
+    this.getPeliculas();
   }
 
   ngOnInit() {
   }
   
+  getPeliculas(){
+    this.peliculaService.get().subscribe(data => {
+      this.peliculasData = data;
+    });
+  }
 }

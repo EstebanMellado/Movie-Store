@@ -11,12 +11,16 @@ export class ListaActoresComponent implements OnInit {
   actoresData: any;
 
   constructor(private actorService: ActorService) {
-    this.actorService.get().subscribe(data => {
-      this.actoresData = data;
-    });
+    this.getActors();
   }
 
   ngOnInit() {
+  }
+
+  getActors(){
+    this.actorService.get().subscribe(data => {
+      this.actoresData = data;
+    });
   }
 
   deleteActor(actor){
