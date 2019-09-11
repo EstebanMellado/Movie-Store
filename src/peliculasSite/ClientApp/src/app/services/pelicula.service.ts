@@ -20,18 +20,18 @@ export class PeliculaService {
   public add(pelicula) {
     console.log('POR HACER EL POST');
     console.log(pelicula);
-    return this.http.post(this.accessPointUrl, pelicula, {headers: this.headers}).subscribe();
+    return this.http.post(this.accessPointUrl, pelicula, {headers: this.headers});
   }
 
   public remove(pelicula) {
     console.log('POR HACER EL DELETE');
     console.log(pelicula);
-    return this.http.delete(this.accessPointUrl + '/' + pelicula.id, {headers: this.headers}).subscribe();
+    return this.http.delete(this.accessPointUrl + '/' + pelicula.id, {headers: this.headers});
   }
 
   public update(pelicula) {
     console.log('POR HACER EL PUT');
     console.log(pelicula);
-    return this.http.put(this.accessPointUrl + '/' + pelicula.id, pelicula, {headers: this.headers}).subscribe();
+    return this.http.put(this.accessPointUrl + '/' + pelicula.id, pelicula, {headers: this.headers});
   }
 }

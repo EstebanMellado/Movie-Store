@@ -20,7 +20,9 @@ export class ListaGenerosComponent implements OnInit {
   }
 
   deleteGenero(genero){
-    this.generoService.remove(genero);
+    this.generoService
+      .remove(genero)
+      .subscribe(genero => console.log('delete ok', genero));
   }
 
 }

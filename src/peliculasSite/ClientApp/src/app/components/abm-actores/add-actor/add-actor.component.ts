@@ -38,7 +38,10 @@ export class AddActorComponent implements OnInit {
       this.guardarFoto(this.selectedFoto);
     }
 
-    this.actorService.add(this.newActor);
+    this.actorService
+      .add(this.newActor)
+      .subscribe(actor => console.log('post ok', actor));
+      
     this.clearActorInfo();
   }
 

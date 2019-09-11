@@ -24,7 +24,9 @@ export class ListaActoresComponent implements OnInit {
   }
 
   deleteActor(actor){
-    this.actorService.remove(actor);
+    this.actorService
+      .remove(actor)
+      .subscribe(actor => console.log('delete ok', actor));
   }
 
 }

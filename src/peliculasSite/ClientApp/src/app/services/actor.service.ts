@@ -20,19 +20,19 @@ export class ActorService {
   public add(actor) {
     console.log('POR HACER EL POST');
     console.log(this.accessPointUrl, actor, {headers: this.headers});
-    return this.http.post(this.accessPointUrl, actor, {headers: this.headers}).subscribe();
+    return this.http.post(this.accessPointUrl, actor, {headers: this.headers});
   }
 
   public remove(actor) {
     console.log('POR HACER EL DELETE');
     console.log(actor);
-    return this.http.delete(this.accessPointUrl + '/' + actor.id, {headers: this.headers}).subscribe();
+    return this.http.delete(this.accessPointUrl + '/' + actor.id, {headers: this.headers});
   }
 
   public update(actor) {
     console.log('POR HACER EL PUT');
     console.log(actor);
-    return this.http.put(this.accessPointUrl + '/' + actor.id, actor, {headers: this.headers}).subscribe();
+    return this.http.put(this.accessPointUrl + '/' + actor.id, actor, {headers: this.headers});
   }
 }
 

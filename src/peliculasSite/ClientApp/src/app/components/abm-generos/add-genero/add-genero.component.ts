@@ -26,7 +26,10 @@ export class AddGeneroComponent implements OnInit {
   };
 
   agregarNuevoGenero() {
-    this.generoService.add(this.newGenero);
+    this.generoService
+      .add(this.newGenero)
+      .subscribe(genero => console.log('post ok', genero));
+
     this.clearGeneroInfo();
   }
 

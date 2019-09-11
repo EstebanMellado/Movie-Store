@@ -19,8 +19,10 @@ export class ListaPeliculasComponent implements OnInit {
   }
   
   getPeliculas(){
-    this.peliculaService.get().subscribe(data => {
-      this.peliculasData = data;
-    });
+    this.peliculaService
+      .get()
+      .subscribe(data => {
+        this.peliculasData = data;
+      });
   }
 }
